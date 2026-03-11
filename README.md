@@ -127,8 +127,10 @@ holyscanf(&price, 'f', 0);
 ```
 holymoly/
 ├── holylib/
-│   ├── holylib.h
-│   ├── holylib.c
+│   ├── include/
+│   │   └── holylib.h
+│   ├── src/
+│   │   └── holylib.c
 │   └── README.md       ← you are here
 └── ...
 ```
@@ -141,3 +143,4 @@ holymoly/
 - The `size` parameter is ignored for `'d'` and `'f'` types — passing `0` is the convention.
 
 - Error messages print directly to `stdout`, not `stderr`. If your project requires separation of output streams, this would need modification.
+
