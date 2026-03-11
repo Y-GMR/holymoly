@@ -1,4 +1,4 @@
-# `holylib`
+# holylib
 
 Part of the **holymoly** project.
 
@@ -139,4 +139,5 @@ holymoly/
 
 - `holyscanf` is designed for **interactive CLI programs**. It is not suitable for non-interactive or piped input where `pause()` prompts would be disruptive.
 - The `size` parameter is ignored for `'d'` and `'f'` types — passing `0` is the convention.
+
 - Error messages print directly to `stdout`, not `stderr`. If your project requires separation of output streams, this would need modification.
