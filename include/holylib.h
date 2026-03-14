@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 
-// v1.0 (2026-03-11)
+// v1.1 (2026-03-14)
 
 void clean();
 void pause();
