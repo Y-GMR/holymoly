@@ -151,8 +151,8 @@ int holyscanf(void *output, char type, int size);
 | Parameter | Type | Description |
 |---|---|---|
 | `output` | `void *` | Pointer to the variable that will receive the parsed value |
-| `type` | `char` | Type specifier: `'s'` for string, `'d'` for int, `'f'` for float |
-| `size` | `int` | Max buffer size — **only relevant for `'s'`** (prevents overflow); pass `0` for numeric types |
+| `type` | `char` | Type specifier: `'s'` for string, `'d'` for int, `'f'` for float, `'c'` for char |
+| `size` | `int` | Max buffer size — **only relevant for `'s'`** (prevents overflow); pass `0` for numeric types and `'c'` |
 
 #### Return Value
 
@@ -168,6 +168,7 @@ int holyscanf(void *output, char type, int size);
 | `'s'` | `char[]` | Safe string copy via `strncpy`; always null-terminates |
 | `'d'` | `int` | Validates via `sscanf`; prints error and calls `pause()` on failure |
 | `'f'` | `float` | Validates via `sscanf`; prints error and calls `pause()` on failure |
+| `'c'` | `char` | Reads the first character from input |
 
 #### Usage Examples
 
@@ -183,6 +184,10 @@ holyscanf(&age, 'd', 0);
 // Read a float
 float price;
 holyscanf(&price, 'f', 0);
+
+// Read a single character
+char initial;
+holyscanf(&initial, 'c', 0);
 ```
 
 ---

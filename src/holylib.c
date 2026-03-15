@@ -44,6 +44,10 @@ int holyscanf(void *output, char type, int size) {
 					return 0;					
 				}
 			}
+			case 'c': {
+				*((char *)output) = input[0];
+				return 1;
+			}
 		}		
 	}
 	return 0;		
